@@ -39,10 +39,9 @@ public class Ejercicio17{
     public static int castNumero(int tamanyoLista) {
         Scanner consoleInput = new Scanner(System.in);
         String cast = consoleInput.next();
-        int num;
 
         try {
-            num = Integer.parseInt(cast);
+           int num = Integer.parseInt(cast);
             switch (tamanyoLista){
                 case 0:
                     if (num >= 24 ||num <0){
