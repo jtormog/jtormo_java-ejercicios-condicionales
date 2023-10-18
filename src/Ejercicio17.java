@@ -1,19 +1,18 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Ejercicio17{
 
     public static void main(String[] args){
-        List<Integer> tiempo = new  ArrayList<>();
+        ArrayList<Integer> tiempo = new  ArrayList<>();
         int num;
 
         while (tiempo.size()<3){
-            if (tiempo.size() == 0) {
+            if (tiempo.isEmpty()) {
                 System.out.print("\nIntroduce la hora: ");
             } else if (tiempo.size() == 1) {
                 System.out.print("Introduce los minutos: ");
-            } else if (tiempo.size() == 2) {
+            } else {
                 System.out.print("Introduce los segundos: ");
             }
             num = castNumero(tiempo.size());
@@ -39,10 +38,9 @@ public class Ejercicio17{
     public static int castNumero(int tamanyoLista) {
         Scanner consoleInput = new Scanner(System.in);
         String cast = consoleInput.next();
-        int num;
 
         try {
-            num = Integer.parseInt(cast);
+           int num = Integer.parseInt(cast);
             switch (tamanyoLista){
                 case 0:
                     if (num >= 24 ||num <0){

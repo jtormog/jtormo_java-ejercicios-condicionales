@@ -31,9 +31,8 @@ public class Dado {
         Scanner input = new Scanner(System.in);
         System.out.print("\nIntroduce el resultado de lanzar el dado: ");
         String dado = input.next();
-        int caraDado;
         try {
-            caraDado = Integer.parseInt(dado);
+            int caraDado = Integer.parseInt(dado);
             if (caraDado >= 1 && caraDado <= 6) {
                 return caraDado;
             } else {

@@ -36,10 +36,9 @@ public class Ejercicio16 {
         System.out.print("\nintroduce tu nota: ");
         Scanner consoleInput = new Scanner(System.in);
         String cast = consoleInput.next();
-        int num;
 
         try {
-            num = Integer.parseInt(cast);
+            int num = Integer.parseInt(cast);
             if (num <0|| num>10){
                 System.out.println("\u001B[31mNo puedes tener una nota inferior a 0 o superior a 10\u001B[0m\n");
             }

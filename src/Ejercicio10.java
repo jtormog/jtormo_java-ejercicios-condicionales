@@ -1,12 +1,11 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Ejercicio10 {
 
     public static void main(String[] args) {
 
-        List<Integer> valores = new ArrayList<>();
+        ArrayList<Integer> valores = new ArrayList<>();
 
         while (valores.size() <2){
             int num = castNumero();
@@ -31,11 +30,9 @@ public class Ejercicio10 {
         Scanner consoleInput = new Scanner(System.in);
         System.out.print("\nintroduce un numero entero: ");
         String cast = consoleInput.next();
-        int num;
 
         try {
-            num = Integer.parseInt(cast);
-            return num;
+            return Integer.parseInt(cast);
         } catch (NumberFormatException e) {
             System.out.print("\n\u001B[31mNo es un valor valido\u001B[0m\n");
 
