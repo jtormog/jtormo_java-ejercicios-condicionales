@@ -1,12 +1,11 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Ejercicio14 {
 
     public static void main(String[] args) {
 
-        List<Integer> valores = new ArrayList<>();
+        ArrayList<Integer> valores = new ArrayList<>();
 
         while (valores.size() <2) {
             int num = castNumero();
