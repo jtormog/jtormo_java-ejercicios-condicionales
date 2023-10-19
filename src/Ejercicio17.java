@@ -40,7 +40,7 @@ public class Ejercicio17{
         Scanner consoleInput = new Scanner(System.in);
 
         try {
-           int num = consoleInput.nextInt();
+            int num = consoleInput.nextInt();
             switch (sizeList){
                 case 0:
                     if (num >= 24 ||num <0){
