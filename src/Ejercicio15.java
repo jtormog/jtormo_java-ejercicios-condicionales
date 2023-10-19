@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
 
 public class Ejercicio15 {
 
@@ -19,11 +21,9 @@ public class Ejercicio15 {
     public static int castNumero() {
         Scanner consoleInput = new Scanner(System.in);
         System.out.print("introduce un numero entero: ");
-        String cast = consoleInput.next();
 
         try {
-            int num = Integer.parseInt(cast);
-            return num;
+            return consoleInput.nextInt();
         } catch (NumberFormatException e) {
             System.out.print("\n\u001B[31mNo es un valor valido\u001B[0m\n");
         }
