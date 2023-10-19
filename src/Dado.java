@@ -26,7 +26,7 @@ public class Dado {
         }
     }
 
-    public static int castNumero() {
+    static int castNumero() {
 
         Scanner input = new Scanner(System.in);
         System.out.print("\nIntroduce el resultado de lanzar el dado: ");

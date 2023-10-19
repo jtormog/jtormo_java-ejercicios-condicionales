@@ -18,7 +18,7 @@ public class Ejercicio13 {
 
     }
 
-    public static int castNumero() {
+    static int castNumero() {
         Scanner consoleInput = new Scanner(System.in);
         System.out.print("introduce un numero entero: ");
 

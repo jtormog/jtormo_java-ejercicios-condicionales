@@ -13,7 +13,7 @@ public class Ejercicio9 {
 
     }
 
-    public static int castNumero() {
+    static int castNumero() {
         System.out.print("\nintroduce tu edad: ");
         Scanner consoleInput = new Scanner(System.in);
 

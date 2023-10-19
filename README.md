@@ -1,10 +1,10 @@
 # jtormo_java-ejercicios-condicionales
 
-## Explicación gerenal sobre castNumber
+## Explicación general sobre castNumber
 
-### He creado un metodo para convertir Scanner en un int y manejar los errores
+### He creado un método para convertir Scanner en un int y manejar los errores
 
-- Como crear metodos: https://www.w3schools.com/java/java_methods.asp
+- Como crear métodos: https://www.w3schools.com/java/java_methods.asp
 
 ### He usado try catch para manejar los errores 
 - como funciona try catch: https://www.w3schools.com/java/java_try_catch.asp

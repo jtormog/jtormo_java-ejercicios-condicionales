@@ -36,7 +36,7 @@ public class Ejercicio17{
 
     }
 
-    public static int castNumero(int tamanyoLista) {
+    static int castNumero(int tamanyoLista) {
         Scanner consoleInput = new Scanner(System.in);
 
         try {
