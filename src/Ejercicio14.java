@@ -15,7 +15,7 @@ public class Ejercicio14 {
         }
         if (Objects.equals(valores.get(0), valores.get(1)))
         {
-            System.out.println("\nAmbos numeros son iguales");
+            System.out.println("\nAmbos números son iguales");
         }
         else {
             System.out.println(Math.max(valores.get(0),valores.get(1)));

@@ -36,12 +36,12 @@ public class Ejercicio17{
 
     }
 
-    static int castNumero(int tamanyoLista) {
+    static int castNumero(int sizeList) {
         Scanner consoleInput = new Scanner(System.in);
 
         try {
            int num = consoleInput.nextInt();
-            switch (tamanyoLista){
+            switch (sizeList){
                 case 0:
                     if (num >= 24 ||num <0){
                         System.out.println("\n\u001B[31mERROR: Se esperaba un numero entre el 0 y 23\u001B[0m");
@@ -67,10 +67,10 @@ public class Ejercicio17{
                     }
                     break;
             }
-            return castNumero(tamanyoLista);
+            return castNumero(sizeList);
         } catch (InputMismatchException e) {
             System.out.println("\n\u001B[31mNo es un valor valido\n\u001B[0m");
-            switch (tamanyoLista){
+            switch (sizeList){
                 case 0:
                     System.out.print("Introduce la hora: ");
                     break;
@@ -83,7 +83,7 @@ public class Ejercicio17{
             }
 
         }
-        return castNumero(tamanyoLista);
+        return castNumero(sizeList);
 
     }
 
