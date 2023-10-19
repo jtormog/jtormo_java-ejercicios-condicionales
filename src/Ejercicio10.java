@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio10 {
@@ -29,13 +30,11 @@ public class Ejercicio10 {
     public static int castNumero() {
         Scanner consoleInput = new Scanner(System.in);
         System.out.print("\nintroduce un numero entero: ");
-        String cast = consoleInput.next();
 
         try {
-            return Integer.parseInt(cast);
-        } catch (NumberFormatException e) {
-            System.out.print("\n\u001B[31mNo es un valor valido\u001B[0m\n");
-
+            return consoleInput.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.print("\n\u001B[31mNo es un valor valido\u001B[0m\n"+ e.getClass());
         }
         return castNumero();
     }

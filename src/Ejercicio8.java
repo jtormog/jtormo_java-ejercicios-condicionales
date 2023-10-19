@@ -14,10 +14,9 @@ public class Ejercicio8 {
     public static int castNumero() {
         System.out.print("\nintroduce tu edad: ");
         Scanner consoleInput = new Scanner(System.in);
-        String cast = consoleInput.next();
 
         try {
-            int num = Integer.parseInt(cast);
+            int num = consoleInput.nextInt();
             if (num >0){
                 return num;
             }

@@ -21,10 +21,9 @@ public class Ejercicio15 {
     public static int castNumero() {
         Scanner consoleInput = new Scanner(System.in);
         System.out.print("introduce un numero entero: ");
-        String cast = consoleInput.next();
 
         try {
-            return Integer.parseInt(cast);
+            return consoleInput.nextInt();
         } catch (NumberFormatException e) {
             System.out.print("\n\u001B[31mNo es un valor valido\u001B[0m\n");
         }

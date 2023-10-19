@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio17{
@@ -37,10 +38,9 @@ public class Ejercicio17{
 
     public static int castNumero(int tamanyoLista) {
         Scanner consoleInput = new Scanner(System.in);
-        String cast = consoleInput.next();
 
         try {
-           int num = Integer.parseInt(cast);
+           int num = consoleInput.nextInt();
             switch (tamanyoLista){
                 case 0:
                     if (num >= 24 ||num <0){
@@ -68,7 +68,7 @@ public class Ejercicio17{
                     break;
             }
             return castNumero(tamanyoLista);
-        } catch (NumberFormatException e) {
+        } catch (InputMismatchException e) {
             System.out.println("\n\u001B[31mNo es un valor valido\n\u001B[0m");
             switch (tamanyoLista){
                 case 0:

@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio16 {
@@ -35,17 +36,16 @@ public class Ejercicio16 {
     public static int castNumero() {
         System.out.print("\nintroduce tu nota: ");
         Scanner consoleInput = new Scanner(System.in);
-        String cast = consoleInput.next();
 
         try {
-            int num = Integer.parseInt(cast);
+            int num = consoleInput.nextInt();
             if (num <0|| num>10){
                 System.out.println("\u001B[31mNo puedes tener una nota inferior a 0 o superior a 10\u001B[0m\n");
             }
             else {
                 return num;
             }
-        } catch (NumberFormatException e) {
+        } catch (InputMismatchException e) {
             System.out.print("\n\u001B[31mNo es un valor valido\u001B[0m\n");
         }
         return castNumero();
