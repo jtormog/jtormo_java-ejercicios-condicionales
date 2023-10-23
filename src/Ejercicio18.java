@@ -24,7 +24,18 @@ public class Ejercicio18 {
             sueldo.set(0,((sueldo.get(0)-35)* (sueldo.get(1)*1.5))+(35*sueldo.get(1)));
         }
         else sueldo.set(0, sueldo.get(0)* sueldo.get(1));
-        System.out.println("\nNombre: "+nombre+"\nSueldo bruto: "+sueldo.get(0)+"\nTarifa normal: "+sueldo.get(1));
+
+        if (sueldo.get(0)>500){
+            if (sueldo.get(0) >900){
+                sueldo.set(1, (sueldo.get(0)-900)*0.55+800);
+            }else sueldo.set(1, (sueldo.get(0)-500)*0.75+500);
+
+
+
+        }
+        System.out.println("\nNombre: "+nombre+"\nSueldo bruto: "+sueldo.get(0)+"\nSueldo neto: "+sueldo.get(1));
+
+
 
     }
     static Double castNumero(int sizeList) {
