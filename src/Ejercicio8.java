@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio8 {
@@ -12,21 +13,26 @@ public class Ejercicio8 {
     }
 
     static int castNumero() {
-        System.out.print("\nintroduce tu edad: ");
         Scanner consoleInput = new Scanner(System.in);
+        int num = 0;
+        boolean valido = false;
 
-        try {
-            int num = consoleInput.nextInt();
-            if (num >0){
-                return num;
-            }
-            else {
-                System.out.print("\n\u001B[31mNo puedes tener 0 años o menos\u001B[0m\n");
-            }
-        } catch (NumberFormatException e) {
-            System.out.print("\n\u001B[31mNo es un valor valido\u001B[0m\n");
-        }
-        return castNumero();
+        while (!valido){
+            System.out.print("\nintroduce tu edad: ");
 
+            try {
+                num = consoleInput.nextInt();
+                if (num >0){
+                    valido = true;
+                }
+                else {
+                    System.out.print("\n\u001B[31mNo puedes tener 0 años o menos\u001B[0m\n");
+                }
+            } catch (InputMismatchException e) {
+                consoleInput.next();
+                System.out.print("\n\u001B[31mNo es un valor valido\u001B[0m\n");
+            }
+
+        }return num;
     }
 }

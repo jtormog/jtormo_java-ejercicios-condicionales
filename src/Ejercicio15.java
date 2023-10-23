@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio15 {
@@ -20,13 +21,22 @@ public class Ejercicio15 {
 
     static int castNumero() {
         Scanner consoleInput = new Scanner(System.in);
-        System.out.print("introduce un numero entero: ");
+        int num = 0;
+        boolean valido = false;
 
-        try {
-            return consoleInput.nextInt();
-        } catch (NumberFormatException e) {
-            System.out.print("\n\u001B[31mNo es un valor valido\u001B[0m\n");
-        }
-        return castNumero();
+        while (!valido){
+            System.out.print("introduce un numero entero: ");
+
+            try {
+                num = consoleInput.nextInt();
+                valido = true;
+            } catch (InputMismatchException e) {
+                consoleInput.next();
+                System.out.print("\n\u001B[31mNo es un valor valido\u001B[0m\n");
+            }
+
+        }return num;
+
+
     }
 }

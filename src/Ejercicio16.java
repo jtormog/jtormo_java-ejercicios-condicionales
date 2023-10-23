@@ -32,23 +32,25 @@ public class Ejercicio16 {
 
         }
     }
-
     static int castNumero() {
         System.out.print("\nintroduce tu nota: ");
         Scanner consoleInput = new Scanner(System.in);
+        boolean valido = false;
+        int num = 0;
 
-        try {
-            int num = consoleInput.nextInt();
-            if (num <0|| num>10){
-                System.out.println("\u001B[31mNo puedes tener una nota inferior a 0 o superior a 10\u001B[0m\n");
+        while (!valido){
+            try {
+                num = consoleInput.nextInt();
+                if (num <0|| num>10){
+                    System.out.println("\u001B[31m\nNo puedes tener una nota inferior a 0 o superior a 10\u001B[0m\n");
+                }
+                else {
+                    valido = true;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("\n\u001B[31mNo es un valor valido\u001B[0m\n");
+                consoleInput.next();
             }
-            else {
-                return num;
-            }
-        } catch (InputMismatchException e) {
-            System.out.print("\n\u001B[31mNo es un valor valido\u001B[0m\n");
-        }
-        return castNumero();
-
+        } return num;
     }
 }

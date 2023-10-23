@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Dado {
@@ -29,17 +30,21 @@ public class Dado {
     static int castNumero() {
 
         Scanner input = new Scanner(System.in);
+        int caraDado = 0;
         System.out.print("\nIntroduce el resultado de lanzar el dado: ");
-        try {
-            int caraDado = input.nextInt();
-            if (caraDado >= 1 && caraDado <= 6) {
-                return caraDado;
-            } else {
-                System.out.println("\n\u001B[31mERROR: Número incorrecto\u001B[0m");
+        boolean valido = false;
+        while (!valido){
+            try {
+                caraDado = input.nextInt();
+                if (caraDado >= 1 && caraDado <= 6) {
+                    valido = true;
+                } else {
+                    System.out.println("\n\u001B[31mERROR: Número incorrecto\u001B[0m");
+                }
+            } catch (InputMismatchException e) {
+                input.next();
+                System.out.println("\n\u001B[31mERROR: Se esperaba otro tipo de valor\u001B[0m");
             }
-        } catch (NumberFormatException e) {
-            System.out.println("\n\u001B[31mERROR: Se esperaba otro tipo de valor\u001B[0m");
-        }
-        return castNumero();
+        }return caraDado;
     }
 }
